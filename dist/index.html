@@ -10,9 +10,12 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="style.css" />
-    <title>Profile Dropdown</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <title>Admin Panel</title>
   </head>
 
   <style>
@@ -70,7 +73,7 @@
 
 <!-- partial:index.partial.html -->
 <header role="banner">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../assets/logo.png" alt="" height="70px" margin-left="px">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../assets/logo.png" alt="" height="70px">
   <h1>Salinsenyas</h1>
   <ul class="utilities">
     <br>
@@ -120,7 +123,17 @@
       </a>
     </div>
     <ul class="nav-links">
-      <li class="nav-tab active" data-view-name="create">
+      <li class="nav-tab active" data-view-name="dashboard">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 23 22">
+            <path fill-rule="evenodd" d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z" />
+          </svg>
+          <span>
+            Dashboard
+          </span>
+        </a>
+      </li>
+      <li class="nav-tab" data-view-name="create">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
             <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
@@ -151,10 +164,13 @@
           </span>
         </a>
       </li>
+      
     </ul>
   </div>
   <div class="main-content w-100 p-5">
-    <div class="create" data-view-active="true">
+
+    
+    <div class="create" data-view-active="false">
       <section class="panel important">
         <h2>Write a new word</h2>
         <br/>
@@ -173,7 +189,17 @@
     <div class="load" data-view-active="false">
       <section class="panel1 important">
         <h2>Existing Phrase</h2>
-        
+        <div class="wrapper">
+          <div class="container1">
+            <form role="search" method="get" class="search-form form" action="">
+              <label class="label1">
+                  <span class="screen-reader-text">Search for...</span>
+                  <input type="search" class="search-field" placeholder="Type something..." value="" name="s" title="" />
+              </label>
+              <input type="submit" class="search-submit buttons" value="&#xf002" />
+          </form>
+          </div>
+        </div>
       </section>
       
     </div>
@@ -200,8 +226,75 @@
         </div>
 
       </section>
+      
+    </div>
+    <div class="dashboard" data-view-active="true">
+      <section class="main-body">
+          <h2>Dashboard</h2>
+          <div class="promo_card">
+            <br/>
+            <br/>
+            <br/>
+            <h1>Welcome to Salinsenyas</h1>
+            <span>Learn how to communicate with deaf.</span>
+            <br/>
+            <br/>
+            <button>Learn More</button>
+            <br/>
+            <br/>
+          </div>
+      </section>
+      <section class="main-body1">
+        <div class="promo_card1">
+          <br/>
+            <br/>
+            <br/>
+            <h1>Fetch the data</h1>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="total">Total Words</span>
+            <br/>
+            <br/>
+            <button>Show</button>
+            <br/>
+            <br/>
+          </div>
+    </section>
+      <section class="main-body2">
+        <div class="history_lists">
+          <div class="list1">
+            <div class="row">
+              <h2 class="history">History</h2>
+              <a href="#">See all</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Row 1, Column 1</td>
+                  <td>Row 1, Column 2</td>
+                </tr>
+                <tr>
+                  <td>Row 2, Column 1</td>
+                  <td>Row 2, Column 2</td>
+                </tr>
+                <tr>
+                  <td>Row 3, Column 1</td>
+                  <td>Row 3, Column 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+    </section>
     </div>
   </div>
+
+    
 </main>
 
 <!-- partial -->
